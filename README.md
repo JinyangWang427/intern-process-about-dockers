@@ -97,7 +97,12 @@ Host target_server
     User root
     RemoteForward [REMOTE_PORT] 127.0.0.1:[LOCAL_PROXY_PORT]
 ```
-
+**server config**
+```text
+# 配置服务器端端口
+export http_proxy=http://127.0.0.1:[LOCAL_PROXY_PORT]
+export https_proxy=http://127.0.0.1:[LOCAL_PROXY_PORT]
+```
 **VS Code 设置：**
 1. 搜索 `Http: Proxy`，填入 `http://127.0.0.1:[REMOTE_PORT]`。
 2. 取消勾选 `Http: Proxy Strict SSL`。
